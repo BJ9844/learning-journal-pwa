@@ -13,20 +13,25 @@
 <main class="content">
     <h1>Weekly Journal</h1>
 
-    <section class="journal-entry">
-        <h2>Week 3 Entry</h2>
+    <!-- Journal form -->
+    <form id="journal-form">
+        <label>Write your entry:</label>
+        <textarea id="journal-text" required></textarea>
+        <button type="submit" class="btn">Save Entry</button>
+    </form>
 
-        <p><strong>1. Which DOM selection methods did you use?</strong><br>
-        I used <code>getElementById()</code> because it lets me target specific elements quickly and efficiently.</p>
+    <h2>Saved Entries</h2>
+    <div id="entries"></div>
 
-        <p><strong>2. Most challenging part?</strong><br>
-        Linking JavaScript correctly so it runs after the HTML loads. I solved it by placing the script tag at the bottom of the page.</p>
+    <h2>Integrated YouTube Video</h2>
+    <div id="youtube-container"></div>
 
-        <p><strong>3. How did you debug your code?</strong><br>
-        I used <code>console.log()</code>, the browser console, and inspected elements to confirm classes changed properly.</p>
-    </section>
 </main>
 
 <script src="js/script.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/browser.js"></script>
+<script src="js/thirdparty.js"></script>
+
 </body>
 </html>
