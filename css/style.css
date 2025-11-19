@@ -1,0 +1,43 @@
+/* Global styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+}
+
+/* Navigation bar (mobile-first) */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #2a2a2a;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navbar a.active {
+    background: #444;
+    border-radius: 5px;
+}
+
+/* Main content */
+.content {
+    padding: 20px;
+}
+
+/* Make navbar horizontal on bigger screens */
+@media (min-width: 700px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navbar a {
+        margin: 0 10px;
+    }
+}
