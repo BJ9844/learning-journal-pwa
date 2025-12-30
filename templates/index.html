@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Journal – Home</title>
+
+    <!-- ✅ Flask static path -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- ✅ Navbar injected here by script.js -->
+    <div id="navbar"></div>
+
+    <main class="content">
+      <h1>Welcome to My Learning Journal</h1>
+      <p>
+        This website documents my journey through Mobile Application
+        Development.
+      </p>
+
+      <button id="darkModeToggle" class="btn">Toggle Theme</button>
+
+      <p id="dateDisplay" class="date"></p>
+    </main>
+
+    <!-- ✅ Flask static path -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

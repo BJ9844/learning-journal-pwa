@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Journal</title>
+
+  <!-- Your main CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+  <!-- Navbar injected by script.js -->
+  <div id="navbar"></div>
+
+  <main class="content">
+    <h1>Learning Journal</h1>
+    <p>Write your reflection and submit it. Your entries are saved on the Flask backend (JSON file).</p>
+
+    <!-- FORM: must match IDs used by journal_api.js -->
+    <section>
+      <h2>Add New Reflection</h2>
+
+      <form id="journalForm">
+        <label for="fname"><b>Name</b></label><br>
+        <input type="text" id="fname" name="fname" placeholder="Enter your name" required>
+        <br><br>
+
+        <label for="reflection"><b>Reflection</b></label><br>
+        <textarea id="reflection" name="reflection" placeholder="Write at least 10 characters..." minlength="10" rows="5" required></textarea>
+        <br><br>
+
+        <button type="submit" class="btn">Submit Reflection</button>
+      </form>
+    </section>
+
+    <hr>
+
+    <!-- SEARCH -->
+    <section>
+      <h2>Search Reflections</h2>
+      <input type="text" id="searchBox" placeholder="Search by name or reflection text..." />
+    </section>
+
+    <hr>
+
+    <!-- ENTRIES -->
+    <section>
+      <h2>Saved Reflections</h2>
+      <div id="entriesContainer">
+        <i>Loading reflections...</i>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Optional: YouTube embed area (if you want to keep it) -->
+    <section>
+      <h2>Learning Video</h2>
+      <div id="youtubeContainer"></div>
+    </section>
+  </main>
+
+  <!-- REQUIRED scripts -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  <!-- Optional if you still want YouTube embed -->
+  <script src="{{ url_for('static', filename='js/thirdparty.js') }}"></script>
+
+  <!-- IMPORTANT: Use ONLY this for Lab 6 API (do NOT include storage.js or old reflections.js) -->
+  <script src="{{ url_for('static', filename='js/journal_api.js') }}"></script>
+
+</body>
+</html>

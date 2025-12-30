@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Journal – About</title>
+
+    <!-- ✅ Flask static path -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- ✅ Correct navbar placeholder -->
+    <div id="navbar"></div>
+
+    <main class="content">
+      <h1>About Me</h1>
+      <p>
+        Hello! I am a Bijay Bohara learning Mobile App Development. This
+        learning journal tracks my weekly progress and showcases my work.
+      </p>
+    </main>
+
+    <!-- ✅ Flask static path -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
