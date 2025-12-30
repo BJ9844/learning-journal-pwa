@@ -41,6 +41,11 @@ def about():
 def projects():
     return render_template("projects.html")
 
+@app.route("/offline")
+def offline():
+    return render_template("offline.html")
+
+
 
 # ---------- API Routes (Lab 6 Required) ----------
 @app.route("/reflections", methods=["GET"])

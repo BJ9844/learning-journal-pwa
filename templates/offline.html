@@ -3,30 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
-<meta name="theme-color" content="#222222">
-
-    <title>Learning Journal – Projects</title>
-
-    <!-- ✅ Flask static path -->
+    <title>Offline</title>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
   </head>
   <body>
-    <!-- ✅ Correct navbar placeholder -->
     <div id="navbar"></div>
-
     <main class="content">
-      <h1>My Projects</h1>
+      <h1>You are offline</h1>
       <p>
-        Here I will showcase the apps, PWAs, and assignments I build throughout
-        the semester.
+        You can still view cached pages. Please reconnect to sync new
+        reflections.
       </p>
     </main>
-
-    <!-- ✅ Flask static path -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
 </html>
